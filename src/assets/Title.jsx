@@ -3,7 +3,7 @@ import { styled } from "styled-components"
 export default function Title() {
     return (
         <TitleContent>
-            <img src="../../public/assets/logo.png" alt="logo"/>
+            <img src="./public/assets/logo.png" alt="logo"/>
             <h1>ZapRecall</h1>
         </TitleContent>
     )
