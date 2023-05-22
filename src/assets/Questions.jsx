@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 import  { cards, imgs } from "./cards";
 import React from "react";
 
-export default function Questions({ setCounter, setStatus }) {
+export default function Questions({ setCounter, setStatus, status }) {
   const {setaPlay, setaVirar} = imgs
   const qstn = cards.map((item, index) => {
     const pergunta = index + 1;
@@ -75,7 +75,7 @@ export default function Questions({ setCounter, setStatus }) {
       updatedState[index] = (
         <div data-test="flashcard" className="divFinal" key={index}>
           <h1 data-test="flashcard-text" className={answer}>Pergunta {index + 1}</h1>
-          <img src={imgs[answer]} alt={answer} />
+          <img src={imgs[answer]} data-test={answer === "certo" ? "zap-icon" : answer === "erro" ? "no-icon" : "partial-icon"} alt={answer} />
         </div>
       )
       return updatedState;

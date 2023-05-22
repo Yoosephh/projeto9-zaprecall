@@ -9,7 +9,7 @@ const [status, setStatus] = React.useState([])
   return (
     <>
       <GlobalStyle />
-      <BodyComponents setCounter={setCounter} counter={counter} setStatus={setStatus}/>
+      <BodyComponents setCounter={setCounter} counter={counter} status={status} setStatus={setStatus}/>
       <Footer counter={counter} status={status}/>
     </>
   )
