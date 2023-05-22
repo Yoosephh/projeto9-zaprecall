@@ -112,6 +112,7 @@ const DivQstn = styled.div`
     padding-right: 10px;
     color: #333333;
   }
+  
   img {
     width: 20px;
     height: 23px;
