@@ -1,9 +1,10 @@
 import { styled } from "styled-components"
+import { imgs } from "./cards"
 
 export default function Title() {
     return (
         <TitleContent>
-            <img src="./public/assets/logo.png" alt="logo"/>
+            <img src={imgs.logo} alt="logo"/>
             <h1>ZapRecall</h1>
         </TitleContent>
     )

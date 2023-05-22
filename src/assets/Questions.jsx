@@ -3,16 +3,15 @@ import  { cards, imgs } from "./cards";
 import React from "react";
 
 export default function Questions({ setCounter, setStatus }) {
-  console.log(imgs)
-
+  const {setaPlay, setaVirar} = imgs
   const qstn = cards.map((item, index) => {
     const pergunta = index + 1;
-
+    
     return (
       <div data-test="flashcard" key={index}>
         <h1 data-test="flashcard-text">Pergunta {pergunta}</h1>
         <button data-test="play-btn" onClick={() => displayQstn(item, index)}>
-          <img src={imgs[1].setaPlay} alt="start" />
+          <img src={setaPlay} alt="start" />
         </button>
       </div>
     );
@@ -26,7 +25,7 @@ export default function Questions({ setCounter, setStatus }) {
         <div className="divPergunta" key={index}>
           <h1 data-test="flashcard-text" className="pergunta">{item.question}</h1>
           <button className="revela" onClick={() => displayAnswer(item, index)}>
-            <img src={imgs[0].setaVirar} alt="start" />
+            <img src={setaVirar} alt="start" />
           </button>
         </div>
       );
@@ -76,18 +75,18 @@ export default function Questions({ setCounter, setStatus }) {
       updatedState[index] = (
         <div className="divFinal" key={index}>
           <h1 data-test="flashcard-text" className={answer}>Pergunta {index + 1}</h1>
-          <img src={imgs[2].answer} alt={answer} />
+          <img src={imgs[answer]} alt={answer} />
         </div>
       )
       return updatedState;
     });
     setStatus((prevState) => {
       const updatedState = [...prevState];
-      updatedState.push(imgs[answer])
+      updatedState.push({image:imgs[answer], data_test: answer === "certo" ? "zap-icon" : answer === "erro" ? "no-icon" : "partial-icon"})
       return updatedState;
     })
   }
-
+  
   return <DivQstn>{GameState}</DivQstn>;
 }
 

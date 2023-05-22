@@ -5,7 +5,6 @@ import erro from "./imgs/icone_erro.png"
 import certo from "./imgs/icone_certo.png"
 import logo from "./imgs/logo.png"
 
-
 export const cards = [
     { question: "O que é JSX?", answer: "Uma extensão da linguagem JavaScript" },
     { question: "O React é __", answer: "Uma biblioteca JavaScript para construção de interfaces" },
@@ -18,9 +17,7 @@ export const cards = [
   ]
 
 
-export const imgs = [
-  { setaVirar: setaVirar },
-  { setaPlay: setaPlay },
-  { quase: quase, partIcon: "partial-icon", certo: certo, zapIcon: "zap-icon", erro: erro, noIcon: "no-icon" },
-  { logo: logo }
-];
+
+  export const imgs = {
+    setaVirar: setaVirar, setaPlay:setaPlay, quase:quase, certo: certo, erro: erro, logo: logo
+}
