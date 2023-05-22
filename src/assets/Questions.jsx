@@ -24,7 +24,7 @@ export default function Questions({ setCounter, setStatus }) {
       updatedState[index] = (
         <div data-test="flashcard" className="divPergunta" key={index}>
           <h1 data-test="flashcard-text" className="pergunta">{item.question}</h1>
-          <button className="revela" onClick={() => displayAnswer(item, index)}>
+          <button data-test="turn-btn" className="revela" onClick={() => displayAnswer(item, index)}>
             <img src={setaVirar} alt="start" />
           </button>
         </div>
