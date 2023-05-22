@@ -22,7 +22,7 @@ export default function Questions({ setCounter, setStatus }) {
     setGameState((prevState) => {
       const updatedState = [...prevState];
       updatedState[index] = (
-        <div className="divPergunta" key={index}>
+        <div data-test="flashcard" className="divPergunta" key={index}>
           <h1 data-test="flashcard-text" className="pergunta">{item.question}</h1>
           <button className="revela" onClick={() => displayAnswer(item, index)}>
             <img src={setaVirar} alt="start" />
@@ -37,7 +37,7 @@ export default function Questions({ setCounter, setStatus }) {
     setGameState((prevState) => {
       const updatedState = [...prevState];
       updatedState[index] = (
-        <div className="divResposta" key={index}>
+        <div data-test="flashcard" className="divResposta" key={index}>
           <h1 data-test="flashcard-text" className="resposta">{item.answer}</h1>
           <div>
             <button 
@@ -73,7 +73,7 @@ export default function Questions({ setCounter, setStatus }) {
     setGameState((prevState) => {
       const updatedState = [...prevState];
       updatedState[index] = (
-        <div className="divFinal" key={index}>
+        <div data-test="flashcard" className="divFinal" key={index}>
           <h1 data-test="flashcard-text" className={answer}>Pergunta {index + 1}</h1>
           <img src={imgs[answer]} alt={answer} />
         </div>
