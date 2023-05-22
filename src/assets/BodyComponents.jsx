@@ -3,11 +3,11 @@ import Questions from "./Questions";
 import Title from "./Title";
 
 
-export default function BodyComponents({setCounter, counter}) {
+export default function BodyComponents({setCounter, setStatus}) {
     return(
         <BodyComponent>
             <Title />
-            <Questions setCounter={setCounter} counter={counter}/>
+            <Questions setCounter={setCounter} setStatus={setStatus} />
         </BodyComponent>
     )
 }
